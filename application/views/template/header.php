@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$title;?></title>
+    <meta name="description" content="Kumpulan contoh implementasi library,plugins dengan menggunakan Codeigniter">
+  	<meta name="keywords" content="contoh codeigniter,belajar codeigniter">
+  	<meta name="author" content="Heru Rahmat Akhnuari">
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/font-awesome/css/font-awesome.min.css" />
     <script type="text/javascript" src="<?=base_url();?>assets/jquery/2.1.4/jquery.min.js"></script>
