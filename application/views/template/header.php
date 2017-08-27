@@ -1,3 +1,10 @@
+<?php
+$keyword_call='';
+if(isset($keyword))
+{
+	$keyword_call=",".$keyword;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,8 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$title;?></title>
     <meta name="description" content="Kumpulan contoh implementasi library,plugins dengan menggunakan Codeigniter">
-  	<meta name="keywords" content="contoh codeigniter,belajar codeigniter">
+  	<meta name="keywords" content="contoh codeigniter,belajar codeigniter<?=$keyword_call;?>">
   	<meta name="author" content="Heru Rahmat Akhnuari">
+  	<meta name="og:title" content="<?=$title;?>">
+	<meta name="og:image" content="<?=base_url();?>assets/codeigniter_logo.png">
+	<meta name="og:url" content="<?=base_url();?>">
+	<meta name="og:site_name" content="CI Demo Application">
+	<meta name="og:locale" content="id_ID">
+	<meta name="og:type" content="website">
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/font-awesome/css/font-awesome.min.css" />
     <script type="text/javascript" src="<?=base_url();?>assets/jquery/2.1.4/jquery.min.js"></script>
