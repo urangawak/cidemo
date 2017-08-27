@@ -10,7 +10,7 @@ class Datatables_simple extends CI_Controller
 	
 	function index()
 	{
-		$cfg['title']='Datatables Ajax Demo';
+		$cfg['title']='Datatables Ajax Simple Demo';
 		$this->load->view('template/header',$cfg);
 		$this->load->view('database/datatable_demo');
 		$this->load->view('template/footer');
