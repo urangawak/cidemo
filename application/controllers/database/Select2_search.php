@@ -5,6 +5,7 @@ class Select2_search extends CI_Controller
 	function index()
 	{
 		$cfg['title']='Select2 Search';
+		$cfg['keyword']="Cara Penggunaan Select2 codeigniter,how to use select2 in codeigniter";
 		$this->load->view('template/header',$cfg);
 		$this->load->view('database/select2_search_demo');
 		$this->load->view('template/footer');

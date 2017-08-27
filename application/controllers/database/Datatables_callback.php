@@ -13,6 +13,7 @@ class Datatables_callback extends CI_Controller
 	function index()
 	{
 		$cfg['title']='Datatables Ajax Callback Demo';
+		$cfg['keyword']="Cara Penggunaan Datatables codeigniter,how to use datatables in codeigniter";
 		$this->load->view('template/header',$cfg);
 		$this->load->view('database/datatable_callback');
 		$this->load->view('template/footer');
