@@ -60,7 +60,7 @@
 									{
 										$NameOfFile=str_replace(".php","",$k2);
 										
-										$url_file=strtolower($k.DIRECTORY_SEPARATOR.$NameOfFile);
+										$url_file=base_url().strtolower($k.DIRECTORY_SEPARATOR.$NameOfFile);
 										?>
 										<li><a href="<?=$url_file;?>"><?=ucwords($NameOfFile);?></a></li>
 										<?php
