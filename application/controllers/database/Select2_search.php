@@ -2,12 +2,24 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Select2_search extends CI_Controller
 {
+	private $path_module='database/Select2_search';
+	private $url;
+	
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->helper('contoh_helper');
+		$this->url=base_url().$this->path_module.'/';
+	}
+	
 	function index()
 	{
 		$cfg['title']='Select2 Search';
 		$cfg['keyword']="Cara Penggunaan Select2 codeigniter,how to use select2 in codeigniter";
 		$this->load->view('template/header',$cfg);
-		$this->load->view('database/select2_search_demo');
+		$d['url']=$this->url;
+		$d['path_module']=$this->path_module;
+		$this->load->view('template/include_template',$d);
 		$this->load->view('template/footer');
 	}
 	

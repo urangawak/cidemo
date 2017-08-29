@@ -23,14 +23,10 @@ if(isset($keyword))
 	<meta name="og:type" content="website">
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/highlightjs/default.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/style.css" />
     <script type="text/javascript" src="<?=base_url();?>assets/jquery/2.1.4/jquery.min.js"></script>
   </head>
-  <style>
-  	body {
-	  min-height: 2000px;
-	  padding-top: 70px;
-	}
-  </style>
   <body>
     
     <nav class="navbar navbar-default navbar-fixed-top">

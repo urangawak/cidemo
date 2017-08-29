@@ -16,18 +16,6 @@ FULL Datatables loader, yang dikasih bintang harus ada
 <script src="<?=base_url();?>assets/datatables/Buttons/1.1.0/js/buttons.html5.min.js" ></script>
 <script src="<?=base_url();?>assets/datatables/Buttons/1.1.0/js/buttons.print.min.js" ></script>
 
-<h5>Demo table Provinces,Regencies,Districts,Villages <a href="javascript:;" onclick="cek_info();">Cek Requirement</a></h5>
-<div id="divinfo" style="display: none;">
-	<div class="panel">
-	<b>1</b> Library Ignited Datatables : <br/>
-	Versi : 0.7<br/>
-	URL : https://github.com/IgnitedDatatables/Ignited-Datatables <br/>
-	<b>2</b> Jquery Datatables : 
-	Versi : 1.10.10<br/>
-	URL : https://datatables.net/ <br/>
-	</div>
-</div>
-
 <script>
 $(document).ready(function(){
 		
@@ -36,7 +24,7 @@ $(document).ready(function(){
 	    "bProcessing": true,
 	    "bServerSide": true,
 	    "responsive": true,
-	    "sAjaxSource": '<?=base_url();?>database/datatables_simple/viewajax',
+	    "sAjaxSource": '<?=$url;?>viewajax',
 	    "bJQueryUI": false,
 	    "dom": 'Bfrtip',
 	    "buttons": [
@@ -52,6 +40,8 @@ $(document).ready(function(){
 	         "mData": "kota"
 	     }, {
 	         "mData": "provinsi"
+	     }, {
+	         "mData": "aksi"
 	     }],
 	    "order": [[ 0, "asc" ]],
 	    "oLanguage": {
@@ -87,6 +77,7 @@ function cek_info()
 		<th>Kecamatan</th>
 		<th>Kota</th>
 		<th>Provinsi</th>
+		<th></th>
 	</thead>
 	<tbody></tbody>
 </table>

@@ -1,0 +1,2 @@
+Demo ini sama dengan <a href="<?=base_url();?>database/datatables_simple" target="_blank">Datatables Simple</a>. Hanya saya fitur callback (lihat controller) dibuat untuk menghandle fungsi diluar konsep datatables. <br/>Contoh kasus :
+Ada table angsuran, lalu kita mau mengetahui sudah berapa kali angsuran yang dibayarkan. Jika tidak memungkinkan membuat query lain untuk menghitung angsuran dibayarkan, maka dibutuhkan sebuah pemanggilan sebuah function pada helper. Nah, nantinya helper tersebut bisa menghandle data lain. Callback ini juga bagus untuk multi koneksi database

@@ -2,12 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Datatables_callback extends CI_Controller
 {
+	private $path_module='database/Datatables_callback';
+	private $url;
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->library('datatables');
 		//Load helper yang ada function callback
 		$this->load->helper('contoh_helper');
+		$this->url=base_url().$this->path_module.'/';
 	}
 	
 	function index()
@@ -15,7 +18,9 @@ class Datatables_callback extends CI_Controller
 		$cfg['title']='Datatables Ajax Callback Demo';
 		$cfg['keyword']="Cara Penggunaan Datatables codeigniter,how to use datatables in codeigniter";
 		$this->load->view('template/header',$cfg);
-		$this->load->view('database/datatable_callback');
+		$d['url']=$this->url;
+		$d['path_module']=$this->path_module;
+		$this->load->view('template/include_template',$d);
 		$this->load->view('template/footer');
 	}
 	

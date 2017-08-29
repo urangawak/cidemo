@@ -16,20 +16,6 @@ FULL Datatables loader, yang dikasih bintang harus ada
 <script src="<?=base_url();?>assets/datatables/Buttons/1.1.0/js/buttons.html5.min.js" ></script>
 <script src="<?=base_url();?>assets/datatables/Buttons/1.1.0/js/buttons.print.min.js" ></script>
 
-<h5>Demo table Provinces,Regencies,Districts,Villages <a href="javascript:;" onclick="cek_info();">Cek Requirement</a></h5>
-Fitur callback (lihat controller) dibuat untuk menghandle fungsi diluar konsep datatables. Contoh kasus :<br/>
-Ada table angsuran, lalu kita mau mengetahui sudah berapa kali angsuran yang dibayarkan. Jika tidak memungkinkan membuat query lain untuk menghitung angsuran dibayarkan, maka dibutuhkan sebuah pemanggilan sebuah function pada helper. Nah, nantinya helper tersebut bisa menghandle data lain. Callback ini juga bagus untuk multi koneksi database
-<div id="divinfo" style="display: none;">
-	<div class="panel">
-	<b>1</b> Library Ignited Datatables : <br/>
-	Versi : 0.7<br/>
-	URL : https://github.com/IgnitedDatatables/Ignited-Datatables <br/>
-	<b>2</b> Jquery Datatables : 
-	Versi : 1.10.10<br/>
-	URL : https://datatables.net/ <br/>
-	</div>
-</div>
-
 <script>
 $(document).ready(function(){
 		
@@ -38,7 +24,7 @@ $(document).ready(function(){
 	    "bProcessing": true,
 	    "bServerSide": true,
 	    "responsive": true,
-	    "sAjaxSource": '<?=base_url();?>database/datatables_callback/viewajax',
+	    "sAjaxSource": '<?=$url;?>viewajax',
 	    "bJQueryUI": false,
 	    "dom": 'Bfrtip',
 	    "buttons": [
@@ -54,8 +40,6 @@ $(document).ready(function(){
 	         "mData": "kota"
 	     }, {
 	         "mData": "provinsi"
-	     }, {
-	         "mData": "aksi"
 	     }],
 	    "order": [[ 0, "asc" ]],
 	    "oLanguage": {
@@ -78,11 +62,6 @@ $(document).ready(function(){
 	
 });
 
-function cek_info()
-{
-	$("#divinfo").toggle();
-}
-
 </script>
 
 <table class="table table-bordered" id="tb">
@@ -91,7 +70,6 @@ function cek_info()
 		<th>Kecamatan</th>
 		<th>Kota</th>
 		<th>Provinsi</th>
-		<th></th>
 	</thead>
 	<tbody></tbody>
 </table>

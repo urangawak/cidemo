@@ -2,10 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Datatables_simple extends CI_Controller
 {
+	private $path_module='database/Datatables_simple';
+	private $url;
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->library('datatables');
+		$this->url=base_url().$this->path_module.'/';
 	}
 	
 	function index()
@@ -13,7 +16,9 @@ class Datatables_simple extends CI_Controller
 		$cfg['title']='Datatables Ajax Simple Demo';
 		$cfg['keyword']="Cara Penggunaan Datatables codeigniter,how to use datatables in codeigniter";
 		$this->load->view('template/header',$cfg);
-		$this->load->view('database/datatable_demo');
+		$d['url']=$this->url;
+		$d['path_module']=$this->path_module;
+		$this->load->view('template/include_template',$d);
 		$this->load->view('template/footer');
 	}
 	

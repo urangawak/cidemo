@@ -1,6 +1,6 @@
 <p>
 	Banyak yang belum mengerti bagaimana cara menggunakan library php, plugins javascript atau css framework. Dengan aplikasi ini kalian dapat mempelajarinya dan mengembangkan pengalaman anda.<br/>
-	Di sini hanyalah demo aja ya, untuk source code nya anda bisa pergi ke <a href="https://github.com/urangawak/cidemo" target="_blank" class="btn btn-default btn-sm"><i class="fa fa-github"></i> Github</a> atau langsung <a href="https://github.com/urangawak/cidemo/archive/master.zip" target="_blank" class="btn btn-default btn-flat btn-sm"><i class="fa fa-download"></i> Download</a>
+	Di sini hanyalah demo aja ya, untuk source code nya anda bisa pergi ke <?=github_url();?> atau langsung <?=github_download();?>
 </p>
 
 <p>

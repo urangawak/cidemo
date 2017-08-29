@@ -2,14 +2,6 @@
 <script src="<?=base_url();?>assets/select2/4.0.1/js/select2.full.min.js" ></script>
 <script src="<?=base_url();?>assets/select2/4.0.1/js/i18n/id.js" ></script>
 
-<h5>Demo table Provinces,Regencies,Districts,Villages <a href="javascript:;" onclick="cek_info();">Cek Requirement</a></h5>
-<div id="divinfo" style="display: none;">
-	<div class="panel">
-	<b>1</b> Library Select2 : <br/>
-	Versi : 4.0.1<br/>
-	URL : http://select2.github.io/ <br/>
-	</div>
-</div>
 <div class="form-horizontal">
 	
 	<div class="form-group ">
@@ -54,7 +46,7 @@ $(document).ready(function(){
 	$("#provinsi").select2({
 		allowClear:true,
 		ajax:{
-			url:"<?=base_url();?>database/select2_search/provinsi", //url request json
+			url:"<?=$url;?>provinsi", //url request json
 			dataType:'json',
 			delay:0,
 			data:function(params){
@@ -77,7 +69,7 @@ $(document).ready(function(){
 	$("#kabupaten").select2({
 		allowClear:true,
 		ajax:{
-			url:"<?=base_url();?>database/select2_search/kabupaten",
+			url:"<?=$url;?>kabupaten",
 			dataType:'json',
 			delay:0,
 			data:function(params){
@@ -101,7 +93,7 @@ $(document).ready(function(){
 	$("#kecamatan").select2({
 		allowClear:true,
 		ajax:{
-			url:"<?=base_url();?>database/select2_search/kecamatan",
+			url:"<?=$url;?>kecamatan",
 			dataType:'json',
 			delay:0,
 			data:function(params){
@@ -125,7 +117,7 @@ $(document).ready(function(){
 	$("#kelurahan").select2({
 		allowClear:true,
 		ajax:{
-			url:"<?=base_url();?>database/select2_search/kelurahan",
+			url:"<?=$url;?>kelurahan",
 			dataType:'json',
 			delay:0,
 			data:function(params){
